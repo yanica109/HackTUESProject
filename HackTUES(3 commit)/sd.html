@@ -42,21 +42,13 @@
 				$("button").click(function(){
 					var ImgSrc = $("#lol").val();
 					var img = new Image();
+					var input = $(".pop").val()
 					img.onload = function() {
-				$("#pop").click(function(){
-					$('#pop').attr("checked", "checked");
-				});
-				$("#pop1").click(function(){
-					$('#pop1').attr("checked", "checked");
-				});
-				$("#pop2").click(function(){
-					$('#pop2').attr("checked", "checked");
-				});
-				if () {
+								if () {
 								ctx.drawImage(img, 10,10,1280,720);
-							} else if ("#pop1") {
+							} else if () {
 								ctx.drawImage(img, 10,10,720,1280);
-							} else if ("#pop2") {
+							} else if () {
 								ctx.drawImage(img, 10,10,400,400);
 							}
 					};
@@ -71,9 +63,9 @@
 		</canvas>
 		<div id="pic">
 			<input style="font-family: italic" id="lol" placeholder="Enter Image URL"></input>
-			<input id="pop" type="radio" name="mode" value="Landscape" checked>Landscape</input>
-		  <input id="pop1" type="radio" name="mode" value="Portrait">Portrait</input>
-		  <input id="pop2" type="radio" name="mode" value="Square">Square</input>
+			<input class="pop" type="radio" name="mode" value="Landscape" >Landscape</input>
+		  <input class="pop" type="radio" name="mode" value="Portrait">Portrait</input>
+		  <input class="pop" type="radio" name="mode" value="Square">Square</input>
 			<button type="button">Go</button>
 		</div>
 	  <div class="footer">
