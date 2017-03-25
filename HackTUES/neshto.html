@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Art & Creativity">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<meta name="author" content="Patrik Mihailov;Ivan Dimitrov; Yanica Georgieva">
+		<title>Drawing tool</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <style>
+		#asd {
+	    display: block;
+	    visibility: hidden;
+	    width: 0;
+	    height: 0;
+		}
+    .heading {
+      clear:left;
+      float:right;
+      font-family: cursive;
+      font-size: 150%;
+    }
+    .footer {
+      clear:both;
+      text-align: center;
+      font-family: verdana;
+      color:#2f2f2f;
+    }
+    body {
+      background-image:url(http://imageshack.com/a/img923/733/vZA8pY.png);
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-attachment:fixed;
+    }
+    </style>
+	</head>
+	<body>
+		<img id="scream" width="800" height="600" src="http://i1.2pcdn.com/node14/image/game/545dbabec01d7d78454f4b3f/545dca1261fca867d28adf79/20141108024619a0dxq9080hs8ahoc.jpg" alt="The Scream">
+		<canvas id="myCanvas" width="310" height="310">
+		</canvas>
+		<script>
+		window.onload = function() {
+    	var c = document.getElementById("myCanvas");
+	    var ctx = c.getContext("2d");
+	    var img = document.getElementById("scream");
+	    ctx.drawImage(img, 10, 10, 300,300);
+		}
+		</script>
+	  <div class="heading">
+	    <h1>Art & Creativity</h1>
+	  </div>
+	  <div class="footer">
+	  <footer>&copy;Copyright: Patrik Mihailov, Ivan Dimitrov and Yanica Georgieva. All rights reserved.</footer>
+	  </div>
+	</body>
+</html>

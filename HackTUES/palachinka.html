@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Art & Creativity">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<meta name="author" content="Patrik Mihailov;Ivan Dimitrov; Yanica Georgieva">
+		<title> Art&Creativity </title>
+		<style>
+			p {
+				color:white;
+			}
+			.button {
+				background-color:#555555;
+				order:none;
+				padding: 15px 32px;
+				text-align:center;
+				display:inline-block;
+				font-family: verdana;
+				font-size: 25px;
+				font-weight: bold;
+				width: 120px;
+			}
+			.button:hover {
+				animation: act infinite;
+				animation-fill-mode: forwards;
+			}
+			@keyframes act {
+				0%{}
+				100%{background-color:#00bacf;}
+			}
+			.button span {             /*Cqloto bez background*/
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+				color:white;
+			}
+			.button span:after {       /*Strelkite pri slagane na mishkata*/
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+				transition: 0.5s;
+				padding-top:24px;
+			}
+			.button:hover span {           /*Cqloto bez background pri slagane na mishkata*/
+				padding-right: 25px;
+			}
+			.button:hover span:after {        /*Strelkite pri slagane na mishkata*/
+				opacity: 1;
+				right: 0;
+			}
+			.heading {
+				clear:left;
+				float:right;
+				font-family: cursive;
+				font-size: 150%;
+			}
+			.footer {
+				clear:both;
+				text-align:center;
+				font-family: verdana;
+				color:#2f2f2f;
+			}
+			body {
+				background-image:url(https://imagizer.imageshack.us/v2/616x345q90/r/923/MrJyey.png);
+				background-repeat:no-repeat;
+				background-size:cover;
+				background-attachment:fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="heading">
+				<h1>Art & Creativity</h1>
+		</div>
+		<div>
+			<div class="button">
+				<a href="#"><span><p>Home</p></span></a>
+			</div>
+			<br>
+			<div class="button">
+				<a href="#"><span><p>Gallery</p></span></a>
+			</div>
+			<br>
+			<div class="button">
+				<a href="#"><span><p>Start Creating</p></span></a>
+			</div>
+			<br>
+			<div class="button">
+				<a href="#"><span><p>Updates</p></span></a>
+			</div>
+			<br>
+			<div class="button">
+				<a href="https://www.google.com"><span><p>Exit</p></span></a>
+			</div>
+		</div>
+		<div class="footer">
+			<footer>&copy;Copyright: Patrik Mihailov, Ivan Dimitrov and Yanica Georgieva. All rights reserved.</footer>
+		</div>
+	</body>
+</html>
