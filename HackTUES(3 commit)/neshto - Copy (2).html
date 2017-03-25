@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Art & Creativity">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<meta name="author" content="Patrik Mihailov;Ivan Dimitrov; Yanica Georgieva">
+		<title>Image Editor</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<style>
+		#pic {
+		}
+    .heading {
+      clear:left;
+      float:right;
+      font-family: cursive;
+      font-size: 150%;
+    }
+    .footer {
+      clear:both;
+      text-align: center;
+      font-family: verdana;
+      color:#2f2f2f;
+    }
+    body {
+      background-image:url(http://imageshack.com/a/img923/733/vZA8pY.png);
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-attachment:fixed;
+    }
+    </style>
+		<script>
+			$(document).ready(function(){
+				var c = document.getElementById("Canvas");
+				var ctx = c.getContext("2d");
+				var img = document.getElementById("scream");
+				$("button").click(function(){
+					var ImgSrc = $("#lol").val();
+					var img = new Image();
+					img.onload = function() {
+					    ctx.drawImage(img, 10, 10, 400,400);
+					};
+					img.src = ImgSrc;
+    		});
+			});
+		</script>
+	</head>
+	<body>
+		<img id="scream" width="0" height="0" src="ImgSrc" alt="The Scream" style="visibility:hidden">
+		<canvas id="Canvas" width="400" height="400" style="margin:auto;display:block">
+		</canvas>
+	  <div class="footer">
+	  	<footer>&copy;Copyright: Patrik Mihailov, Ivan Dimitrov and Yanica Georgieva. All rights reserved.</footer>
+	  </div>
+		<input  id="lol"></input>
+		<button type="button">GO</button>
+	</body>
+</html>
